@@ -27,6 +27,12 @@ def sum_series(n, a=1, b=1):
     """
     Description
     """
+    if n == 0:
+        return a
+    if n == 1:
+        return b
+    else:
+        return sum_series(n-1, a, b) + sum_series(n-2, a, b)
 
 
 
@@ -34,4 +40,5 @@ def sum_series(n, a=1, b=1):
 
 print(fibonacci(8))
 print(lucas(8))
+print(sum_series(2, 3, 4))
 
